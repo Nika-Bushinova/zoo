@@ -80,7 +80,7 @@ body {
    font-size: 100%;
    line-height: 1;
    font-size: 14px;
-   
+
    -ms-text-size-adjust: 100%;
    -moz-text-size-adjust: 100%;
    -webkit-text-size-adjust: 100%;
@@ -88,7 +88,7 @@ body {
 
 body {
    margin: 0px;
-   
+
 }
 
 input,
@@ -384,7 +384,7 @@ input::-webkit-inner-spin-button {
    height: 1110px !important;
    background: url(../images/palm_foto.jpg) left bottom no-repeat,
       url(../images/strelitzia\ 1.jpg) right bottom no-repeat;
-   padding: 0px 13.75% 100px 13.75%;
+   padding: 0px 13.85% 100px 13.75%;
 
    &__h {
       display: flex;
@@ -1399,8 +1399,10 @@ span {
 /*---------------------------------------------------------ADAPTIVE---------------------------------------------------*/
 
 $mobile:320px;
-$mobileS:380px;
+$mobileX:380px;
+$mobileXS:630px;
 $tablet:640px;
+$tabletH:900px;
 $note:1000px;
 
 @media screen and (max-width:$note) {
@@ -1478,7 +1480,7 @@ $note:1000px;
       background: url(../images/palm_foto_min.jpg) left bottom no-repeat, url(../images/strelitzia\ 1.jpg) right bottom/25% no-repeat;
 
       height: 1126px;
-      padding: 52px 30px 0px 30px;
+      padding: 52px 32px 0px 30px;
 
       &__left {
          margin: 370px 0px 0px 325px !important;
@@ -1659,8 +1661,9 @@ $note:1000px;
          }
       }
    }
-   main+._container{
-      margin:0px
+
+   main+._container {
+      margin: 0px
    }
 
    /*-----------------------second--------------------*/
@@ -1749,14 +1752,16 @@ $note:1000px;
          margin-left: 200px
       }
    }
-   
+
 }
 
-@media screen and (max-width:$tablet) {
-   
+@media screen and (max-width:$tablet),
+(max-width:$tabletH) {
+
    .header__container {
       min-height: 34px;
       height: 34px;
+
       a,
       a:visited {
          text-decoration: none;
@@ -1815,7 +1820,7 @@ $note:1000px;
 
    .header__close::after {
       position: absolute;
-      content:url('../icons/x_icon.svg');
+      content: url('../icons/x_icon.svg');
       width: 32px;
       height: 32px;
       top: 10px;
@@ -1885,7 +1890,7 @@ $note:1000px;
       font-size: 15.2116px;
       line-height: 120%;
       text-align: center;
-    
+
    }
 
    .menu__list>li {
@@ -1957,7 +1962,7 @@ $note:1000px;
    }
 
    .anymal-fav__div {
-      margin: -10px 0px 0px 330px;
+      margin: -10px 0px 0px 51.56%;
       padding: 53px 25px 0px 0px;
       background: url(../../assets/icons/Ellipse\ 6.svg) 0px 20px no-repeat;
       background-size: 237px;
@@ -2005,7 +2010,7 @@ $note:1000px;
    .council {
       height: 1020px !important;
       background: url(../images/palm_foto_min.jpg) -50px bottom/30% no-repeat, url(../images/strelitzia\ 1.jpg) right bottom/25% no-repeat;
-      padding: 52px 2px 0px 20px;
+      padding: 52px 5px 0px 20px;
 
       &__left {
          margin: 370px 0px 0px 325px !important;
@@ -2017,6 +2022,10 @@ $note:1000px;
 
       &__blocks {
          margin-bottom: -10px;
+
+         .slick-track {
+            width: 1000px !important;
+         }
       }
 
       &__button._firstB {
@@ -2097,7 +2106,7 @@ $note:1000px;
             margin: 22px 0px 40px 0px;
 
             .works__block {
-               margin-right: 40px;
+               margin-right: 15%;
 
                &._first::after,
                &._second::after {
@@ -2118,39 +2127,50 @@ $note:1000px;
    .testimonials {
       padding: 60px 10px 0px 10px;
       background: url(../images/leav_foto.jpg) 102% 116%/20% no-repeat #ffffff;
+
       .slick-track {
 
          display: block;
          height: 350px;
-      width:530px;
+         width: 530px;
       }
-      .slider__text{
-         width:600px;
-         height:110px;
+
+      .slider__text {
+         width: 600px;
+         height: 110px;
          overflow: hidden;
       }
-      .slider__input input[type=range]{
-         width:500px
+
+      .slider__input input[type=range] {
+         width: 500px
       }
-      .slick-list{
-         padding:40px 0px 0px 112px!important;
-         margin-left:0px;
-         height:370px !important
+
+      .slick-list {
+         padding: 40px 0px 0px 112px !important;
+         margin-left: 0px;
+         height: 370px !important
       }
-      .slider__input{display:none}
-      .slick-slide{
-         height:100px;
-         margin:0px;
-         margin-left:-100px
+
+      .slider__input {
+         display: none
       }
-      .slider__item{
-         margin-bottom:20px;
-         margin-top:10px;
+
+      .slick-slide {
+         height: 100px;
+         margin: 0px;
+         margin-left: -100px
       }
-      h2{
-         margin-left:15px;
-         margin-bottom:22px
+
+      .slider__item {
+         margin-bottom: 20px;
+         margin-top: 10px;
       }
+
+      h2 {
+         margin-left: 15px;
+         margin-bottom: 22px
+      }
+
       &__common {
          width: 600px
       }
@@ -2158,9 +2178,10 @@ $note:1000px;
       .slick-next {
          display: none !important
       }
-      .square{
-         margin:50px 0px 80px 32%;
-         padding:15px 55px;
+
+      .square {
+         margin: 50px 0px 80px 32%;
+         padding: 15px 55px;
       }
    }
 
@@ -2173,8 +2194,9 @@ $note:1000px;
             width: 285px;
          }
       }
-      .slick-track{
-         height:825px
+
+      .slick-track {
+         height: 825px
       }
 
       .slick-prev {
@@ -2186,39 +2208,47 @@ $note:1000px;
       }
 
 
-  
+
    }
-   .footer{
-      padding:12px 20px;
-      height:282px !important;
-      .button__item{
-         margin-top:-35px
+
+   .footer {
+      padding: 12px 20px;
+      height: 282px !important;
+
+      .button__item {
+         margin-top: -35px
       }
-      .footer__items{
-         margin-left:90%;
-         position:absolute;
-         margin-top:-120px;
-         a{
+
+      .footer__items {
+         margin-left: 90%;
+         position: absolute;
+         margin-top: -120px;
+
+         a {
             visibility: hidden;
             font-size: 0px;
          }
 
       }
-      .footer__item{
 
-         margin-bottom:24px
+      .footer__item {
+
+         margin-bottom: 24px
       }
-      .footer__subscribe{
+
+      .footer__subscribe {
          display: none;
       }
+
       .footer__menu_items {
          position: absolute;
          margin-left: -80px !important;
-         margin-top:235px;
-   }
-   .footer__menu_items li {
-      margin-right: 38px;
-  }
+         margin-top: 235px;
+      }
+
+      .footer__menu_items li {
+         margin-right: 38px;
+      }
    }
 
 
@@ -2227,13 +2257,14 @@ $note:1000px;
    .panda {
       background: url(../images/Giant\ Panda.jpg)-260px -165px/210% no-repeat;
       height: 335px;
-width:640px !important;
+      width: 640px !important;
    }
 
    .pick {
       padding: 30px 20px 50px 20px;
 
-      h2 {margin-right:0px;
+      h2 {
+         margin-right: 0px;
          font-size: 24px;
       }
 
@@ -2255,16 +2286,19 @@ width:640px !important;
    .pick_and_feed {
       padding: 30px 40px 30px 27px;
 
-      > p:not(:last-child){
+      >p:not(:last-child) {
          text-align: center;
-         padding-left:10px;
+         padding-left: 10px;
       }
-      &__radio{
-         margin:20px 22% 25px;
-         input{
-            margin-left:48px
+
+      &__radio {
+         margin: 20px 22% 25px;
+
+         input {
+            margin-left: 48px
          }
       }
+
       &__input {
          &:after {
             margin: 5px 0px 0px -20px
@@ -2272,16 +2306,18 @@ width:640px !important;
 
          input {
             margin: -5px 0% 0px 15%;
-            width:180px;
-            height:45px;
+            width: 180px;
+            height: 45px;
          }
 
       }
-      &__img{
-         margin-top:50px
+
+      &__img {
+         margin-top: 50px
       }
-      &__x{
-         margin-top:180px
+
+      &__x {
+         margin-top: 180px
       }
 
       >h3 {
@@ -2289,28 +2325,35 @@ width:640px !important;
          padding: 0px 0px 20px 30px;
 
       }
-      h5{
-         margin:40px 20px 0px -15px;
+
+      h5 {
+         margin: 40px 20px 0px -15px;
       }
 
       &_number {
          padding: 0px 0px 0px 0px;
-        > div:first-of-type{
-         margin-top:155px
-        }
+
+         >div:first-of-type {
+            margin-top: 155px
+         }
       }
 
       &__dots {
-         div:nth-child(1),  div:nth-child(2), div:nth-child(3){
-            display:none
+
+         div:nth-child(1),
+         div:nth-child(2),
+         div:nth-child(3) {
+            display: none
          }
+
          justify-content: space-between;
          margin-left: 10px;
-margin-top:12px;
+         margin-top:12px;
+
          &:before {
             margin: -6px 0px 0px -37px;
             width: 115%;
-        
+
          }
 
          div {
@@ -2319,8 +2362,8 @@ margin-top:12px;
 
          div hr {
             margin: 7px 0px 0px 8px;
-            
-            width:120px
+
+            width: 120px
          }
       }
 
@@ -2343,10 +2386,81 @@ margin-top:12px;
    }
 }
 
+/*----------------------------------------------------------------900H--------------------------------------------------*/
+@media screen and (max-width:$tabletH)and (min-width: 641px) {
+   .main-block__council {
+      .slick-track {
+         width: 60000px !important;
+      }
+
+      .slick-prev {
+         margin-left: 40%
+      }
+
+      .slick-next {
+         margin-left: 50%
+      }
+   }
+
+   .feed-friend__common {
+      .works {
+         margin-left: 7%
+      }
+
+   }
+
+   .testimonials {
+      &__common {
+         width: 90%
+      }
+
+      .slick-list {
+         padding-left: 10px !important
+      }
+
+      .slider__text {
+         margin-left: 150px;
+      }
+      .slick-track {
+         margin-left: 50px;
+         height: 600px;
+         overflow: hidden;
+         width: 700px;
+
+      }
+      h2 {
+         margin-left: 30%
+      }
+   }
+
+   .panda {
+      background: url(../images/Giant\ Panda.jpg)0px / cover no-repeat;
+      height: 187px;
+      /* width: 320px !important; */
+      max-width: 900px;
+      min-width: 100%;
+   }
+
+   .pick_and_feed__dots {
+      &:before {
+         width: 110%
+      }
+
+      div {
+         hr {
+            width: 180px;
+         }
+      }
+
+   }
+
+}
 
 
 /*--------------------------------------------------------------------------320------------------------------------------------------------*/
-@media screen and (max-width:$mobile ),(max-width:$mobileS){
+@media screen and (max-width:$mobile),
+(max-width:$mobileX),
+(max-width:$mobileXS) {
    .header__copy {
       display: none
    }
@@ -2373,7 +2487,7 @@ margin-top:12px;
       height: 15px;
       left: 92%;
    }
-  
+
    .header__logo {
       margin-left: -10px;
       margin-top: 17px;
@@ -2383,7 +2497,7 @@ margin-top:12px;
    }
 
    .animal-fav {
-      height: 268px !important;
+      height: 264px !important;
    }
 
    .anymal-fav__text,
@@ -2408,10 +2522,11 @@ margin-top:12px;
          font-size: 28px;
          line-height: 75%
       }
+
       .round-button {
          margin: 60px 0px 0px -47%;
          padding: 18px 91px;
-         position:absolute;
+         position: absolute;
       }
    }
 
@@ -2430,20 +2545,22 @@ margin-top:12px;
       p {
          line-height: 130%;
          font-size: 16px;
-         margin-top:10px;
-         margin-left:-10px;
+         margin-top: 10px;
+         margin-left: -10px;
          padding-right: 10px;
       }
    }
+
    .backstage__text {
       h4 {
          margin-top: 22px;
-         margin-left:-10px;
+         margin-left: -10px;
          margin-bottom: 0px
       }
-      h3{
+
+      h3 {
          font-size: 24px;
-         margin:43px 0px 0px -10px;
+         margin: 43px 0px 0px -10px;
       }
 
       width:495px
@@ -2452,7 +2569,7 @@ margin-top:12px;
    .council {
       height: 1600px !important;
       background: url(../images/palm_foto_min.jpg) -10px bottom/20% no-repeat, url(../images/strelitzia\ 1.jpg) 110% bottom/30% no-repeat;
-      padding: 75px 2px 0px 10px;
+      padding: 75px 5px 0px 10px;
 
       &__left {
          margin: 370px 0px 0px 325px !important;
@@ -2472,8 +2589,7 @@ margin-top:12px;
 
       &__block {
          flex: 0 0 290px;
-            margin-bottom: 20px !important
-         
+         margin-bottom: 20px !important
       }
 
       &__text {
@@ -2524,7 +2640,7 @@ margin-top:12px;
 
             font-size: 24px;
             padding: 10px 0px 10px 47px;
-            
+
          }
 
          h4 {
@@ -2533,21 +2649,25 @@ margin-top:12px;
             line-height: 120%;
             text-align: center;
          }
-         h3{
+
+         h3 {
             font-size: 24px;
-            margin-top:0px;
+            margin-top: 0px;
             font-size: 24px;
          }
 
-         p { display:none}
+         p {
+            display: none
+         }
 
          span {
-           display:none
+            display: none
          }
 
          ._secondB {
             margin: -15px -2% 0px -2%;
-            h3{
+
+            h3 {
                font-size: 16px;
             }
          }
@@ -2555,8 +2675,8 @@ margin-top:12px;
          .works__blocks {
             margin: 15px 0px 80px 55px;
             flex-direction: column;
-            justify-content: space-between ;
-            height:690px;
+            justify-content: space-between;
+            height: 690px;
 
             .works__block {
                margin-right: 40px;
@@ -2577,53 +2697,65 @@ margin-top:12px;
          }
       }
    }
-   .slick2{
+
+   .slick2 {
       .slick-slide {
-      &.slick-center {
-         padding: 0 0px 0px 0px;
-         width:320px !important
+         &.slick-center {
+            padding: 0 0px 0px 0px;
+            width: 320px !important
+         }
       }
-   }
    }
 
    .testimonials {
       padding: 30px 10px 0px 10px;
       background: url(../images/leav_foto.jpg) 102% 105%/20% no-repeat #ffffff;
+
       .slick-track {
 
          display: block;
          height: 350px;
-      width:320px;
+         width: 320px;
       }
-      .slider__text{
-         width:300px;
+
+      .slider__text {
+         width: 300px;
          height: 105px;
          overflow: hidden;
       }
-      .slider__input input[type=range]{
-         width:500px
+
+      .slider__input input[type=range] {
+         width: 500px
       }
-      .slick-list{
-         padding:40px 0px 0px 100px!important;
-         margin-left:0px;
-         height:370px !important;
-         width:310px;
+
+      .slick-list {
+         padding: 40px 0px 0px 100px !important;
+         margin-left: 0px;
+         height: 370px !important;
+         width: 310px;
       }
-      .slider__input{display:none}
-      .slick-slide{
-         height:100px;
-         margin:0px;
-         margin-left:-100px
+
+      .slider__input {
+         display: none
       }
-      .slider__item{
-         margin-bottom:20px;
-         margin-top:10px;
+
+      .slick-slide {
+         height: 100px;
+         margin: 0px;
+         margin-left: -100px
       }
-      h2{
-         margin-left:0px;
-         margin-bottom:10px;
+
+      .slider__item {
+         margin-bottom: 20px;
+         margin-top: 10px;
+      }
+
+      h2 {
+         margin-left: 0px;
+         margin-bottom: 10px;
          font-size: 24px;
       }
+
       &__common {
          width: 300px
       }
@@ -2631,9 +2763,10 @@ margin-top:12px;
       .slick-next {
          display: none !important
       }
-      .square{
-         margin:25px 0px 60px 30px;
-         padding:15px 55px;
+
+      .square {
+         margin: 25px 0px 60px 30px;
+         padding: 15px 55px;
       }
    }
 
@@ -2646,70 +2779,82 @@ margin-top:12px;
             width: 285px;
          }
       }
-      .slick-track{
-         height:1425px;
-         flex-direction:column;
- 
-      
+
+      .slick-track {
+         height: 1425px;
+         flex-direction: column;
+
+
       }
 
       .slick-prev {
-         display:none !important
+         display: none !important
       }
 
       .slick-next {
-         display:none !important
+         display: none !important
       }
 
 
-  
+
    }
-   .footer{
-      padding:12px 20px;
-      height:334px !important;
-      .button__item{
-         margin-top:-35px
+
+   .footer {
+      padding: 12px 20px;
+      height: 334px !important;
+
+      .button__item {
+         margin-top: -35px
       }
-      .footer__items{
-         margin-left:12.5%;
-         position:absolute;
-         margin-top:-90px;
-         li{
-            margin-right:20px;
+
+      .footer__items {
+         margin-left: 12.5%;
+         position: absolute;
+         margin-top: -90px;
+
+         li {
+            margin-right: 20px;
          }
-            display:flex;
-           
-         
-         a{
+
+         display:flex;
+
+
+         a {
             visibility: hidden;
             font-size: 0px;
          }
 
       }
-      &__button{
-         margin:90px 0px 0px -15px
+
+      &__button {
+         margin: 90px 0px 0px -15px
       }
-      &__img{
-         width:150px;
-         border:0px;
-         margin:10px 0px 0px 60px;
+
+      &__img {
+         width: 150px;
+         border: 0px;
+         margin: 10px 0px 0px 60px;
          background: url(../icons/bamboo.svg) 85px -10px no-repeat;
       }
-      .footer__item{
 
-         margin-bottom:24px
+      .footer__item {
+
+         margin-bottom: 24px
       }
-      .footer__subscribe{
+
+      .footer__subscribe {
          display: none;
       }
+
       .footer__menu_items {
          position: absolute;
          margin-left: -210px !important;
-         margin-top:280px;
-   }
-   .footer__menu_items li {
-      margin-right: 28px;
-  }
+         margin-top: 280px;
+      }
+
+      .footer__menu_items li {
+         margin-right: 28px;
+      }
    }
 
 
@@ -2718,18 +2863,21 @@ margin-top:12px;
    .panda {
       background: url(../images/Giant\ Panda.jpg)-140px -85px/230% no-repeat;
       height: 187px;
-width:320px !important;
+      width: 320px !important;
+
    }
 
    .pick {
       padding: 30px 9px 12px 10px;
       line-height: 140%;
 
-      h2 {margin-right:0px;
+      h2 {
+         margin-right: 0px;
          font-size: 24px;
       }
 
-      h4 {font-size: 24px;
+      h4 {
+         font-size: 24px;
          margin: 20px 0px 30px 0px
       }
 
@@ -2747,21 +2895,25 @@ width:320px !important;
    .pick_and_feed {
       padding: 20px 0px 30px 0px;
 
-      > p:not(:last-child){
+      >p:not(:last-child) {
          text-align: center;
-         padding-left:0px;
+         padding-left: 0px;
          font-size: 16px;
          line-height: 140%;
       }
-      &__radio{
-         margin:10px 10px 25px;
-         input{
-            margin-left:30px
+
+      &__radio {
+         margin: 10px 10px 25px;
+
+         input {
+            margin-left: 30px
          }
-         span{
-            margin-right:17px
+
+         span {
+            margin-right: 17px
          }
       }
+
       &__input {
          &:after {
             margin: 5px 0px 0px -20px
@@ -2769,22 +2921,24 @@ width:320px !important;
 
          input {
             margin: -5px 0% 0px -7%;
-            width:180px;
-            height:45px;
+            width: 180px;
+            height: 45px;
          }
 
       }
-      &__x{
-         margin:0px 0px 0px 0px;
-margin-top:80px;
-margin-left:0px;
-         padding-right:10px;
+
+      &__x {
+         margin: 0px 0px 0px 0px;
+         margin-top: 80px;
+         margin-left: 0px;
+         padding-right: 10px;
          background: url(../icons/x_icon.svg) 0px/8px no-repeat;
       }
-      &__img{
+
+      &__img {
          margin-top: 25px;
          background: url(../images/animals-widget.svg) 30px -15px / 160px no-repeat;
-height:160px;
+         height: 160px;
       }
 
       >h3 {
@@ -2793,75 +2947,87 @@ height:160px;
          padding: 0px 0px 10px 20px;
 
       }
-      h5{
-         margin:-8px 20px 0px 0px;
+
+      h5 {
+         margin: -8px 20px 0px 0px;
       }
 
       &_number {
          padding: 0px 0px 0px 0px;
          height: 160px;
-        > div:first-of-type{
-         margin-top:55px;
-         width:100px;
-        
-div{
-   background: url(../images/amount_of_days_donate.svg) 20px/50px no-repeat;
-   margin:0px;
-   margin-bottom:-3px;
-   font-size: 40.6015px;
-   width:95px;
-}
-p:first-of-type{
-   font-size: 9.02255px;
-   text-align:left;
-}
-        }
+
+         >div:first-of-type {
+            margin-top: 55px;
+            width: 100px;
+
+            div {
+               background: url(../images/amount_of_days_donate.svg) 20px/50px no-repeat;
+               margin: 0px;
+               margin-bottom: -3px;
+               font-size: 40.6015px;
+               width: 95px;
+            }
+
+            p:first-of-type {
+               font-size: 9.02255px;
+               text-align: left;
+            }
+         }
       }
 
       &__dots {
-         div:nth-child(1),  div:nth-child(2), div:nth-child(3){
-            display:none
+
+         div:nth-child(1),
+         div:nth-child(2),
+         div:nth-child(3) {
+            display: none
          }
-         div input{
-            width:3px;
-            height:3px;
-            top:-15px;
-            margin-bottom:-10px;
-            margin-left:8px
+
+         div input {
+            width: 3px;
+            height: 3px;
+            top: -15px;
+            margin-bottom: -10px;
+            margin-left: 8px
          }
-          div input[type=radio]::before{
-            width:5px;
-            height:5px;
-          }
-          div:last-child input{
-            top:-8.5px;
-            margin-bottom:12px
-          }
+
+         div input[type=radio]::before {
+            width: 5px;
+            height: 5px;
+         }
+
+         div:last-child input {
+            top: -8.5px;
+            margin-bottom: 12px
+         }
+
          justify-content: space-between;
          margin-left: 10px;
-margin-top:12px;
-margin-bottom:65px;
+         margin-top:12px;
+         margin-bottom:65px;
+
          &:before {
             margin: -2px 0px 0px -10px;
             width: 103%;
-            height:15px;
-        
+            height: 15px;
+
          }
 
          div {
             width: 65px;
-            p{
+
+            p {
                font-size: 13px;
-               margin-bottom:-50px;
-               margin-top:-9px;
-               margin-left:0px;
+               margin-bottom: -50px;
+               margin-top: -9px;
+               margin-left: 0px;
             }
          }
 
          div hr {
             margin: 4px 0px 0px 10px;
-            
-            width:65px
+
+            width: 65px
          }
 
       }
@@ -2884,30 +3050,92 @@ margin-bottom:65px;
       }
    }
 }
+
 /*------------------------------------------------------360----------------------------------------------------*/
-@media screen and (max-width:$mobileS) and (min-width: 321px){
+@media screen and (max-width:$mobileX) and (min-width: 321px) {
+
    .anymal-fav__div .round-button {
       margin: 60px 0px 0px -37%;
    }
+
    .council {
-      padding: 75px 10px 0px 35px;
-      
+      padding: 75px 50px 0px 35px;
+
    }
-   .feed-friend__common{
-       .works__blocks {
-margin-left:70px
-       }
+
+   .feed-friend__common {
+      .works__blocks {
+         margin-left: 70px
+      }
    }
+
    .testimonials {
       padding: 30px 10px 0px 30px;
    }
+
    .footer .button__item {
-      margin-left:25px
+      margin-left: 25px
    }
-   .footer{
-   .footer__menu_items {
-      margin-left:-190px !important
+
+   .footer {
+      .footer__menu_items {
+         margin-left: -190px !important
+      }
    }
+
+   .panda {
+      background: url(../images/Giant\ Panda.jpg)0px / cover no-repeat;
+      height: 187px;
+      /* width: 320px !important; */
+      max-width: 420px;
+      min-width: 99%;
+   }
+
 }
+
+/*--------------------------------------------------------------------------415px----------------------------------------------------*/
+@media screen and (max-width:$mobileXS) and (min-width: 381px) {
+
+   .anymal-fav__div {
+      height: 200px;
+
+      .round-button {
+         margin: 100px 0px 0px -27%;
+      }
+   }
+
+
+   .council {
+      padding: 0px 50px 0px 65px;
+
+   }
+
+   .feed-friend__common {
+      .works__blocks {
+         margin-left: 30%
+      }
+   }
+
+   .testimonials {
+      padding: 30px 10px 0px 15%;
+   }
+
+   .footer .button__item {
+      margin-left: 10%
+   }
+
+   .footer {
+      .footer__menu_items {
+         margin-left: -190px !important
+      }
+   }
+
+   .panda {
+      background: url(../images/Giant\ Panda.jpg)0px / cover no-repeat;
+      height: 187px;
+      /* width: 320px !important; */
+      max-width: 420px;
+      min-width: 99%;
+   }
 
 }
