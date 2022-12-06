@@ -6,6 +6,15 @@ summ.forEach((el,i)=>{
 let donateSum=document.getElementById('pick_and_feed__input')
 donateSum.setAttribute('placeholder',summAmount[i].innerHTML)
 donateSum.value=donateSum.setAttribute('value',summAmount[i].innerHTML)
-console.log(donateSum.getAttribute('value'))
+console.log(el.checked)
+   }   )
+})
+summAmount.forEach((el,i)=>{
+   el.addEventListener('click', function m(eo){
+let donateSum=document.getElementById('pick_and_feed__input')
+donateSum.setAttribute('placeholder',summAmount[i].innerHTML)
+donateSum.value=donateSum.setAttribute('value',summAmount[i].innerHTML)
+summ[i].checked=true
+console.log(summ[i].checked)
    }   )
 })

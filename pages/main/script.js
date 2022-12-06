@@ -18,12 +18,21 @@ let footInput=document.getElementById('footIn')
 let div=document.createElement('div')
 let wrapper=document.querySelector('.wrapper')
 blockText.forEach((el,i)=>{
-   if(el===blockText[0]||el===blockText[1]||el===blockText[4]||el===blockText[8]||el===blockText[9]){
+   if (window.matchMedia("(max-width: 999px)").matches) {
+      if(el===blockText[0]||el===blockText[1]||el===blockText[4]||el===blockText[8]||el===blockText[9]||el===blockText[12]||el===blockText[14]||el===blockText[15]||el===blockText[20]||el===blockText[21]){
+         el.style.background='url(../../assets/icons/banana-bamboo_icon.svg)220px/10% no-repeat'
+      }
+      if(el===blockText[2]||el===blockText[3]||el===blockText[5]||el===blockText[6]||el===blockText[7]||el===blockText[10]||el===blockText[11]||el===blockText[13]||el===blockText[16]||el===blockText[17]||el===blockText[18]||el===blockText[19]||el===blockText[22]||el===blockText[23]){
+         el.style.background='url(../../assets/icons/meet-fish_icon.svg)230px/15% no-repeat'
+      }
+   }else{
+   if(el===blockText[0]||el===blockText[1]||el===blockText[4]||el===blockText[8]||el===blockText[9]||el===blockText[12]||el===blockText[14]||el===blockText[15]||el===blockText[20]||el===blockText[21]){
       el.style.background='url(../../assets/icons/banana-bamboo_icon.svg)321px no-repeat'
    }
-   if(el===blockText[2]||el===blockText[3]||el===blockText[5]||el===blockText[6]||el===blockText[7]||el===blockText[10]||el===blockText[11]){
+   if(el===blockText[2]||el===blockText[3]||el===blockText[5]||el===blockText[6]||el===blockText[7]||el===blockText[10]||el===blockText[11]||el===blockText[13]||el===blockText[16]||el===blockText[17]||el===blockText[18]||el===blockText[19]||el===blockText[22]||el===blockText[23]){
       el.style.background='url(../../assets/icons/meet-fish_icon.svg)310px no-repeat'
    }
+}
 })
 
 block1.forEach((el,i)=>{
@@ -120,35 +129,36 @@ $('.slider').on('init reInit',function(event,slick){
       arrows:true,
       dots:false,
       adaptiveHeight:false,
-      slidesToShow:6,
-      slidesToScroll:6,
-      speed:2000,
+      slidesToShow:1,
+      slidesToScroll:1,
+
       initialSlide:0,
       autoplay:false,
-      autoplaySpeed:2000,
+      autoplaySpeed:500,
       infinite:true,
       pauseOnDotsHover:true,
       pauseOnFocus:true,
       waitForAnimate:false,
       centerMode:false,
       variableWidth:true,
-      responsive: [{
+      responsive: [
+         {
          breakpoint: 650,
          settings: {
-  slidesToShow:4,
-  slidesToScroll: 1,
+  slidesToShow:2,
+  slidesToScroll: 2,
   initialSlide:1,
-
+speed:500,
   
          }
        }],
        responsive: [{
          breakpoint: 330,
          settings: {
-  slidesToShow:4,
+  slidesToShow:1,
   slidesToScroll: 1,
   initialSlide:1,
-
+  speed:500,
   
          }
        }]
@@ -173,7 +183,7 @@ $(document).ready(function(){
       variableWidth:true,
       responsive: [
          {
-         breakpoint: 650,
+         breakpoint: 899,
          settings: {
            vertical: true,
   verticalSwiping: true,
@@ -181,7 +191,6 @@ $(document).ready(function(){
   slidesToScroll: 1,
   initialSlide:1,
   variableWidth: false,
-  
          }
        }]
    })
@@ -237,12 +246,12 @@ if (window.matchMedia("(max-width: 650px)").matches)  {
         el2.style.overflow='visible';
         el2.style.height='350px'
         //el.style.marginTop='100px';
-        el2.style.marginTop=document.documentElement.scrollHeight/1.4+'px';
+        el2.style.marginTop=document.documentElement.scrollHeight/1.3+'px';
         el2.style.position='absolute';
         el2.style.width='100%';
         el2.style.zIndex='25';
-        el2.style.paddingTop='60px';
-        el2.style.background="url('../../assets/icons/x_icon.svg') 94% 20px  no-repeat, url(../../assets/icons/second.svg) 10px 11px no-repeat, rgb(241, 243, 242)"
+        el2.style.paddingTop='20px';
+        el2.style.background="url('../../assets/icons/x_icon.svg') 94% 20px  no-repeat, rgb(241, 243, 242)"
         div.style.position='absolute';
         div.style.background='rgba(0,0,0,0.7)';
         div.style.top='0';
@@ -252,6 +261,7 @@ if (window.matchMedia("(max-width: 650px)").matches)  {
         div.classList.add('black');
         div.style.display='block';
         div.style.zIndex='10';
+    
        
         wrapper.appendChild(div);
         wrapper.appendChild(el2)
@@ -265,7 +275,3 @@ div.style.display='none'
             
          })
    }
-
-   
-
-document.addEventListener('click',e => console.log(e.target))

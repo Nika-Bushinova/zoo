@@ -329,7 +329,7 @@ input::-webkit-inner-spin-button {
 .council {
   height: 1110px !important;
   background: url(../images/palm_foto.jpg) left bottom no-repeat, url(../images/strelitzia\ 1.jpg) right bottom no-repeat;
-  padding: 0px 13.75% 100px 13.75%;
+  padding: 0px 13.85% 100px 13.75%;
 }
 .council__h {
   display: flex;
@@ -1282,7 +1282,7 @@ span {
   .council {
     background: url(../images/palm_foto_min.jpg) left bottom no-repeat, url(../images/strelitzia\ 1.jpg) right bottom/25% no-repeat;
     height: 1126px;
-    padding: 52px 30px 0px 30px;
+    padding: 52px 32px 0px 30px;
   }
   .council__left {
     margin: 370px 0px 0px 325px !important;
@@ -1482,7 +1482,7 @@ span {
     margin-left: 200px;
   }
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 640px), (max-width: 900px) {
   .header__container {
     min-height: 34px;
     height: 34px;
@@ -1653,7 +1653,7 @@ span {
     margin-left: 0px;
   }
   .anymal-fav__div {
-    margin: -10px 0px 0px 330px;
+    margin: -10px 0px 0px 51.56%;
     padding: 53px 25px 0px 0px;
     background: url(../../assets/icons/Ellipse\ 6.svg) 0px 20px no-repeat;
     background-size: 237px;
@@ -1692,7 +1692,7 @@ span {
   .council {
     height: 1020px !important;
     background: url(../images/palm_foto_min.jpg) -50px bottom/30% no-repeat, url(../images/strelitzia\ 1.jpg) right bottom/25% no-repeat;
-    padding: 52px 2px 0px 20px;
+    padding: 52px 5px 0px 20px;
   }
   .council__left {
     margin: 370px 0px 0px 325px !important;
@@ -1702,6 +1702,9 @@ span {
   }
   .council__blocks {
     margin-bottom: -10px;
+  }
+  .council__blocks .slick-track {
+    width: 1000px !important;
   }
   .council__button._firstB {
     margin: 0px 27% 0px 25%;
@@ -1757,7 +1760,7 @@ span {
     margin: 22px 0px 40px 0px;
   }
   .feed-friend__common .works__blocks .works__block {
-    margin-right: 40px;
+    margin-right: 15%;
   }
   .feed-friend__common .works__blocks .works__block._first::after, .feed-friend__common .works__blocks .works__block._second::after {
     background: url("../icons/arrow.svg") 0px 0px no-repeat;
@@ -1929,7 +1932,9 @@ span {
     margin-left: 10px;
     margin-top: 12px;
   }
-  .pick_and_feed__dots div:nth-child(1), .pick_and_feed__dots div:nth-child(2), .pick_and_feed__dots div:nth-child(3) {
+  .pick_and_feed__dots div:nth-child(1),
+.pick_and_feed__dots div:nth-child(2),
+.pick_and_feed__dots div:nth-child(3) {
     display: none;
   }
   .pick_and_feed__dots:before {
@@ -1957,8 +1962,54 @@ span {
     margin-left: 200px;
   }
 }
+/*----------------------------------------------------------------900H--------------------------------------------------*/
+@media screen and (max-width: 900px) and (min-width: 641px) {
+  .main-block__council .slick-track {
+    width: 60000px !important;
+  }
+  .main-block__council .slick-prev {
+    margin-left: 40%;
+  }
+  .main-block__council .slick-next {
+    margin-left: 50%;
+  }
+  .feed-friend__common .works {
+    margin-left: 7%;
+  }
+  .testimonials__common {
+    width: 90%;
+  }
+  .testimonials .slick-list {
+    padding-left: 10px !important;
+  }
+  .testimonials .slider__text {
+    margin-left: 150px;
+  }
+  .testimonials .slick-track {
+    margin-left: 50px;
+    height: 600px;
+    overflow: hidden;
+    width: 700px;
+  }
+  .testimonials h2 {
+    margin-left: 30%;
+  }
+  .panda {
+    background: url(../images/Giant\ Panda.jpg) 0px/cover no-repeat;
+    height: 187px;
+    /* width: 320px !important; */
+    max-width: 900px;
+    min-width: 100%;
+  }
+  .pick_and_feed__dots:before {
+    width: 110%;
+  }
+  .pick_and_feed__dots div hr {
+    width: 180px;
+  }
+}
 /*--------------------------------------------------------------------------320------------------------------------------------------------*/
-@media screen and (max-width: 320px), (max-width: 380px) {
+@media screen and (max-width: 320px), (max-width: 380px), (max-width: 630px) {
   .header__copy {
     display: none;
   }
@@ -1987,7 +2038,7 @@ span {
     background: url(../../assets/icons/bamboo.svg) 22px 13px/9px no-repeat;
   }
   .animal-fav {
-    height: 268px !important;
+    height: 264px !important;
   }
   .anymal-fav__text,
 .anymal-fav__text_span {
@@ -2045,7 +2096,7 @@ span {
   .council {
     height: 1600px !important;
     background: url(../images/palm_foto_min.jpg) -10px bottom/20% no-repeat, url(../images/strelitzia\ 1.jpg) 110% bottom/30% no-repeat;
-    padding: 75px 2px 0px 10px;
+    padding: 75px 5px 0px 10px;
   }
   .council__left {
     margin: 370px 0px 0px 325px !important;
@@ -2347,7 +2398,9 @@ span {
     margin-top: 12px;
     margin-bottom: 65px;
   }
-  .pick_and_feed__dots div:nth-child(1), .pick_and_feed__dots div:nth-child(2), .pick_and_feed__dots div:nth-child(3) {
+  .pick_and_feed__dots div:nth-child(1),
+.pick_and_feed__dots div:nth-child(2),
+.pick_and_feed__dots div:nth-child(3) {
     display: none;
   }
   .pick_and_feed__dots div input {
@@ -2403,7 +2456,7 @@ span {
     margin: 60px 0px 0px -37%;
   }
   .council {
-    padding: 75px 10px 0px 35px;
+    padding: 75px 50px 0px 35px;
   }
   .feed-friend__common .works__blocks {
     margin-left: 70px;
@@ -2416,5 +2469,43 @@ span {
   }
   .footer .footer__menu_items {
     margin-left: -190px !important;
+  }
+  .panda {
+    background: url(../images/Giant\ Panda.jpg) 0px/cover no-repeat;
+    height: 187px;
+    /* width: 320px !important; */
+    max-width: 420px;
+    min-width: 99%;
+  }
+}
+/*--------------------------------------------------------------------------415px----------------------------------------------------*/
+@media screen and (max-width: 630px) and (min-width: 381px) {
+  .anymal-fav__div {
+    height: 200px;
+  }
+  .anymal-fav__div .round-button {
+    margin: 100px 0px 0px -27%;
+  }
+  .council {
+    padding: 0px 50px 0px 65px;
+  }
+  .feed-friend__common .works__blocks {
+    margin-left: 30%;
+  }
+  .testimonials {
+    padding: 30px 10px 0px 15%;
+  }
+  .footer .button__item {
+    margin-left: 10%;
+  }
+  .footer .footer__menu_items {
+    margin-left: -190px !important;
+  }
+  .panda {
+    background: url(../images/Giant\ Panda.jpg) 0px/cover no-repeat;
+    height: 187px;
+    /* width: 320px !important; */
+    max-width: 420px;
+    min-width: 99%;
   }
 }/*# sourceMappingURL=style.css.map */
